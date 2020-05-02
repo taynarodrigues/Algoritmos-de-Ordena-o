@@ -2,12 +2,15 @@
 
 ## Bubble Sort
 
-Um algoritmo bem básico é o ‘Bubble Sort’ ou “Ordenação por Bolha”, a ideia desse algoritmo é comparar pares de elementos adjacentes, ou seja,
-dois elementos sequências dentro de um array e vai trocar eles de lugar se estiverem na ordem errada, por exemplo, tenho dois elementos um 
-adjacente ao  outro e os mesmos não estão na ordem que eu quero que é crescente ou decrescente, então eu os troco de lugar, tal processo se 
-repete até que mais nenhuma troca seja necessária, ou seja, os (elementos já ordenados), o que torna o elemento bem simples de ordenação.
-Falando da “Performance”, o melhor caso: O(n), n operações são necessárias para ordenar, ou seja, os dados já estão ordenados então ele 
-só passa uma vez verificando, e seu pior caso: O(n²) então lembrando, o algoritmo básico tem seu desempenho ruim, e uma outra situação 
-é que o mesmo não é recomendado para grandes conjuntos de dados. Portanto o Bubble Sort pode não ser considerado um algoritmo muito 
-eficiente do ponto de vista por performance, ou seja, tudo pelo fato de sua complexidade assintótica muito elevado, uma complexidade de 
-no mínimo O(n²) e tais não são tão eficientes.
+Um algoritmo bem básico é o ‘Bubble Sort’ ou “Ordenação por Bolha”, a ideia desse algoritmo é comparar pares de elementos adjacentes, ou seja, dois elementos sequências dentro de um array e vai trocar eles de lugar se estiverem na ordem errada, por exemplo, tenho dois elementos um adjacente ao  outro e os mesmos não estão na ordem que eu quero que é crescente ou decrescente, então eu os troco de lugar, tal processo se repete até que mais nenhuma troca seja necessária, ou seja, os (elementos já ordenados), o que torna o elemento bem simples de ordenação. Falando da “Performance”, o melhor caso: O(n), n operações são necessárias para ordenar, ou seja, os dados já estão ordenados então ele só passa uma vez verificando, e seu pior caso: O(n²) então lembrando, o algoritmo básico tem seu desempenho ruim, e uma outra situação é que o mesmo não é recomendado para grandes conjuntos de dados. Portanto o Bubble Sort pode não ser considerado um algoritmo muito eficiente do ponto de vista por performance, ou seja, tudo pelo fato de sua complexidade assintótica muito elevado, uma complexidade de no mínimo O(n²) e tais não são tão eficientes.
+
+## Quick Sort
+
+Algoritmo “QuickSort” ou “Ordenação por troca de Partições”, ou seja, ordenação por troca de partições, onde sua ideia básica é dividir e conquistar. 
+Onde iremos dividir esse vetor no qual ao escolher um elemento como pivô e a partir deste fazer o processo de particionar o vetor, onde os dados serão rearranjados de uma forma que os valores menores do que o pivô seja colocados antes do pivô e os maiores depois, com isso tem-se um pivô, e todo número maior que ele de um lado e todos os números menores que ele do outro lado, portanto recursivamente ordenar essas duas partições utilizando o processo de dividir e conquistar.
+Sua performance é excelente no melhor caso: O(n log n) e seu pior caso: O(n²), pode-se dizer que é péssimo porém é um caso extremamente raro, ele é um algoritmo estável, ou seja, ele não altera a ordem de dados iguais.
+E pode-se dizer que uma desvantagem é: como escolher esse pivô? Pelo fato de existirem várias maneira de escolhê-lo poderá afetar ou não seu desempenho para melhor ou pior do algoritmo.
+E onde está o segredo para calcular o pivô? Criar uma função para particionar os dados recebendo um vetor o início e o fim desse mesmo. Onde diz que o pivô é a posição do início do vetor. 
+Enquanto a posição da esquerda for menor que direita andasse com a esquerda, ou seja, (aumentado o valor da esquerda) até achar um elemento que não seja menor que o pivô e faz-se o mesmo processo com a direita e enquanto for maior que o pivô vai-se diminuindo e finalizando o processo e se a esquerda é menor que a direita, se sim troca-se os dois de lugar e assim continuasse o processo e quando termina? 
+Nesse caso quando a esquerda não for menor que a direita, ou seja, chegará o momento que a direita vai estar menor que a esquerda, portanto é dada uma parada, pois todos foram movimentados e trocados de lugar, portanto o início vai receber o último valor da direita, ou seja, onde a direita parar colocasse no lugar do início e por consequência a posição da direita se torna o valor do pivô e por fim retornasse o valor da direita, ou seja, onde a parada houve com o elemento da direita portanto este é o ponto do vetor onde todos os números antes é menor e todos os números depois é maior, portantos todos os números na sua posição correspondente, ou seja, vetor ordenado. 
+

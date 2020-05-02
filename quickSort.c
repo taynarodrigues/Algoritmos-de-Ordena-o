@@ -19,7 +19,7 @@
         }
         printf("\n");
 
-        quickSort(vetor, 0, MAX-1);
+        particiona(vetor, 0, MAX-1);
 
         printf("\nValores ordenados do Quick Sort\n");
         for(i = 0; i < MAX; i++){
@@ -29,7 +29,7 @@
     return 0;
 }
 
-    void quickSort(int *v, int esq, int dir){
+    void particiona(int *v, int esq, int dir){
     int inicio, fim, pivo, aux;
 
     inicio = esq;
@@ -53,9 +53,9 @@
     }
 
     if(fim > esq){
-        quickSort(v, esq, fim);
+        particiona(v, esq, fim);
     }
     if(inicio < dir){
-        quickSort(v, inicio, dir);
+        particiona(v, inicio, dir);
     }
 }
